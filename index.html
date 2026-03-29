@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thuba - Sri Lanka's premier destination for premium hijabs, modest fashion, prayer sets, and accessories. Crafted with care, worn with confidence.">
+    <title>Thuba | Premium Modest Fashion - Sri Lanka</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="text-serif">THUBA</h1>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav-placeholder"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=1600&h=900&fit=crop')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-label">New Collection 2025</span>
+            <h1>Elegance in Every Drape</h1>
+            <p class="hero-desc">Discover Sri Lanka's finest collection of premium hijabs and modest fashion. Crafted for the woman who values grace, quality, and timeless style.</p>
+            <div class="hero-buttons">
+                <a href="pages/shop.html" class="btn btn-primary btn-lg">Shop Collection</a>
+                <a href="pages/about.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.4);color:#fff">Our Story</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+        <div class="container countdown-content">
+            <h3 class="text-serif">Eid Festive Sale</h3>
+            <p class="countdown-label">Exclusive offers end in</p>
+            <div class="countdown-timer">
+                <div class="countdown-item"><span class="number" id="cd-days">00</span><span class="label">Days</span></div>
+                <div class="countdown-item"><span class="number" id="cd-hours">00</span><span class="label">Hours</span></div>
+                <div class="countdown-item"><span class="number" id="cd-mins">00</span><span class="label">Minutes</span></div>
+                <div class="countdown-item"><span class="number" id="cd-secs">00</span><span class="label">Seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Shop by Category</h2>
+                <div class="divider"></div>
+                <p class="subtitle">Explore our curated collections designed for the modern modest woman</p>
+            </div>
+            <div class="categories-grid">
+                <a href="pages/hijabs.html" class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=600&h=800&fit=crop" class="img-primary" alt="Hijabs Collection">
+                    <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?w=600&h=800&fit=crop" class="img-secondary" alt="Hijabs Collection 2">
+                    <div class="category-overlay"><div><span class="category-name">Hijabs</span><span class="category-count">28 Products</span></div></div>
+                </a>
+                <a href="pages/prayer-sets.html" class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&h=800&fit=crop" class="img-primary" alt="Prayer Sets">
+                    <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=600&h=800&fit=crop" class="img-secondary" alt="Prayer Sets 2">
+                    <div class="category-overlay"><div><span class="category-name">Prayer Sets</span><span class="category-count">12 Products</span></div></div>
+                </a>
+                <a href="pages/bags.html" class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop" class="img-primary" alt="Bags Collection">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop" class="img-secondary" alt="Bags Collection 2">
+                    <div class="category-overlay"><div><span class="category-name">Bags</span><span class="category-count">13 Products</span></div></div>
+                </a>
+                <a href="pages/jewellery.html" class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop" class="img-primary" alt="Jewellery">
+                    <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&h=800&fit=crop" class="img-secondary" alt="Jewellery 2">
+                    <div class="category-overlay"><div><span class="category-name">Jewellery</span><span class="category-count">15 Products</span></div></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="section" style="background:var(--color-offwhite)">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Best Sellers</h2>
+                <div class="divider"></div>
+                <p class="subtitle">Our most loved pieces, chosen by women across Sri Lanka</p>
+            </div>
+            <div class="bestsellers-grid" id="bestsellers-grid"></div>
+            <div class="text-center" style="margin-top:var(--space-10)">
+                <a href="pages/shop.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="section-lg">
+        <div class="container">
+            <div class="brand-story">
+                <div class="brand-story-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?w=800&h=1000&fit=crop" alt="Thuba Brand Story">
+                </div>
+                <div class="brand-story-text fade-in">
+                    <span class="story-label">Our Heritage</span>
+                    <h2>Crafted in Sri Lanka, Worn with Grace</h2>
+                    <p>Born from the vibrant heart of Colombo, Thuba represents a new chapter in Sri Lankan modest fashion. We believe that modesty and elegance are not opposites but partners in creating something truly beautiful.</p>
+                    <p>Every piece in our collection is thoughtfully designed and carefully crafted, blending traditional values with contemporary aesthetics. From the softest chiffons to the richest silks, our fabrics are sourced from the finest mills to ensure quality that you can feel.</p>
+                    <a href="pages/about.html" class="btn btn-primary" style="margin-top:var(--space-6)">Read Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO BANNER -->
+    <section class="promo-banner">
+        <div class="container fade-in">
+            <h2>Exclusive Eid Collection</h2>
+            <p>Up to 25% off on selected premium hijabs and prayer sets. Use code at checkout.</p>
+            <div class="promo-code">THUBA25</div>
+            <div style="margin-top:var(--space-8)">
+                <a href="pages/shop.html" class="btn btn-gold btn-lg">Shop the Sale</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>What Our Clients Say</h2>
+                <div class="divider"></div>
+                <p class="subtitle">Trusted by thousands of women across Sri Lanka</p>
+            </div>
+            <div class="testimonials-slider-wrap fade-in">
+                <div class="testimonials-slider" id="testi-slider">
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"The quality of Thuba's silk hijabs is unmatched in Sri Lanka. The fabric drapes beautifully and holds its colour wash after wash."</blockquote>
+                        <span class="author">Fatima R. - Colombo</span>
+                    </div>
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"I ordered a prayer set as a gift for my mother, and the packaging was stunning. It felt like opening a luxury brand parcel."</blockquote>
+                        <span class="author">Aisha M. - Kandy</span>
+                    </div>
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"Finally, a Sri Lankan brand that understands premium modest fashion. Their chiffon hijabs are my everyday go-to."</blockquote>
+                        <span class="author">Zainab K. - Galle</span>
+                    </div>
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"Beautiful prints and amazing customer service. My order arrived within 2 days in perfect condition."</blockquote>
+                        <span class="author">Sarah H. - Negombo</span>
+                    </div>
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"The most elegant abayas I have ever owned. I highly recommend Thuba for any special occasion or daily wear."</blockquote>
+                        <span class="author">Nadia J. - Matara</span>
+                    </div>
+                    <div class="testimonial-card-slide">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"I love the attention to detail. Even the underscarves are made of premium, breathable material suitable for our weather."</blockquote>
+                        <span class="author">Amina S. - Kandy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM GALLERY -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Follow Our Journey</h2>
+                <div class="divider"></div>
+                <p class="subtitle">@thuba.lk on Instagram</p>
+            </div>
+        </div>
+        <div class="insta-grid">
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+            <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1585914924626-15adac1e6402?w=400&h=400&fit=crop" alt="Thuba Instagram" loading="lazy"></a>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container fade-in">
+            <h2>Join the Thuba Family</h2>
+            <p>Subscribe to receive exclusive offers, new arrivals, and styling inspiration delivered to your inbox.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

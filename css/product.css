@@ -1,0 +1,54 @@
+/* THUBA - Product Detail Styles */
+.product-detail{margin-top:calc(var(--nav-height) + 40px);padding-bottom:var(--space-16)}
+.product-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:start}
+.product-gallery{position:sticky;top:calc(var(--nav-height) + 20px)}
+.product-main-image{width:100%;aspect-ratio:3/4;overflow:hidden;margin-bottom:var(--space-4)}
+.product-main-image img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition-slow)}
+.product-main-image:hover img{transform:scale(1.05)}
+.product-thumbnails{display:flex;gap:var(--space-3)}
+.product-thumbnails .thumb{width:80px;height:100px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color var(--transition-fast);opacity:0.6}
+.product-thumbnails .thumb.active,.product-thumbnails .thumb:hover{border-color:var(--color-gold);opacity:1}
+.product-thumbnails .thumb img{width:100%;height:100%;object-fit:cover}
+
+.product-info-detail{padding:var(--space-4) 0}
+.product-info-detail .breadcrumb{justify-content:flex-start;margin-bottom:var(--space-6);color:var(--color-taupe)}
+.product-info-detail .breadcrumb a{color:var(--color-grey)}
+.product-info-detail .breadcrumb a:hover{color:var(--color-dark)}
+.product-info-detail .product-category-tag{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.15em;color:var(--color-gold);margin-bottom:var(--space-3);display:block}
+.product-info-detail h1{font-size:var(--text-3xl);margin-bottom:var(--space-4)}
+.product-info-detail .product-price-large{font-size:var(--text-2xl);font-weight:600;color:var(--color-dark);margin-bottom:var(--space-6);display:block}
+.product-info-detail .product-desc{font-size:var(--text-md);line-height:1.9;color:var(--color-grey);margin-bottom:var(--space-8)}
+.product-divider{height:1px;background:var(--color-beige);margin:var(--space-6) 0}
+
+.variant-section{margin-bottom:var(--space-6)}
+.variant-section h4{font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:var(--space-3);color:var(--color-charcoal)}
+.variant-options{display:flex;gap:var(--space-3);flex-wrap:wrap}
+.variant-btn{padding:var(--space-3) var(--space-5);border:1px solid var(--color-beige);font-size:var(--text-sm);cursor:pointer;transition:all var(--transition-fast);color:var(--color-charcoal);background:transparent}
+.variant-btn:hover,.variant-btn.active{border-color:var(--color-dark);background:var(--color-dark);color:#fff}
+
+.qty-selector{display:flex;align-items:center;gap:0;margin-bottom:var(--space-8)}
+.qty-selector button{width:44px;height:44px;border:1px solid var(--color-beige);display:flex;align-items:center;justify-content:center;font-size:var(--text-lg);color:var(--color-charcoal);background:transparent}
+.qty-selector button:hover{background:var(--color-cream)}
+.qty-selector input{width:60px;height:44px;text-align:center;border:1px solid var(--color-beige);border-left:0;border-right:0;font-size:var(--text-base);font-weight:500;color:var(--color-dark)}
+
+.product-action-btns{display:flex;gap:var(--space-4);margin-bottom:var(--space-8)}
+.product-action-btns .btn{flex:1;padding:var(--space-5)}
+
+.product-features{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin-top:var(--space-8)}
+.feature-item{text-align:center;padding:var(--space-5)}
+.feature-item svg{width:24px;height:24px;margin:0 auto var(--space-3);color:var(--color-gold)}
+.feature-item span{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.08em;color:var(--color-grey)}
+
+.related-section{margin-top:var(--space-16)}
+.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)}
+
+@media(max-width:968px){
+    .product-detail-grid{grid-template-columns:1fr;gap:var(--space-8)}
+    .product-gallery{position:static}
+    .related-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+    .product-action-btns{flex-direction:column}
+    .product-features{grid-template-columns:1fr}
+    .related-grid{grid-template-columns:1fr 1fr;gap:var(--space-3)}
+}

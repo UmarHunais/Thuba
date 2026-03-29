@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Thuba's complete collection of premium hijabs, prayer sets, accessories, bags, and jewellery. Sri Lanka's finest modest fashion.">
+    <title>Shop All | Thuba - Premium Modest Fashion</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="cat-hero" style="background-image:url('https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=1600&h=600&fit=crop')">
+        <div class="hero-content"><h1>Our Collection</h1><p>Discover 100+ handpicked pieces for the modern modest woman</p></div>
+    </div>
+
+    <div class="container">
+        <div class="shop-layout">
+            <aside class="shop-sidebar" id="shop-sidebar">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-6)">
+                    <h3 style="font-size:var(--text-lg)">Filters</h3>
+                    <button id="close-filters">&times;</button>
+                </div>
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" class="filter-cat" value="Hijabs"> Hijabs</label>
+                    <label><input type="checkbox" class="filter-cat" value="Prayer Sets"> Prayer Sets</label>
+                    <label><input type="checkbox" class="filter-cat" value="Underscarves"> Underscarves</label>
+                    <label><input type="checkbox" class="filter-cat" value="Accessories"> Accessories</label>
+                    <label><input type="checkbox" class="filter-cat" value="Bags"> Bags</label>
+                    <label><input type="checkbox" class="filter-cat" value="Bandanas"> Bandanas</label>
+                    <label><input type="checkbox" class="filter-cat" value="Jewellery"> Jewellery</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Type</h4>
+                    <label><input type="checkbox" class="filter-type" value="Chiffon"> Chiffon</label>
+                    <label><input type="checkbox" class="filter-type" value="Silk"> Silk</label>
+                    <label><input type="checkbox" class="filter-type" value="Jersey"> Jersey</label>
+                    <label><input type="checkbox" class="filter-type" value="Premium"> Premium</label>
+                    <label><input type="checkbox" class="filter-type" value="Prayer Set"> Prayer Set</label>
+                    <label><input type="checkbox" class="filter-type" value="Underscarf"> Underscarf</label>
+                    <label><input type="checkbox" class="filter-type" value="Tote"> Tote</label>
+                    <label><input type="checkbox" class="filter-type" value="Necklaces"> Necklaces</label>
+                    <label><input type="checkbox" class="filter-type" value="Earrings"> Earrings</label>
+                    <label><input type="checkbox" class="filter-type" value="Bracelets"> Bracelets</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Price Range (LKR)</h4>
+                    <div class="price-range">
+                        <input type="number" id="min-price" placeholder="Min" min="0">
+                        <span>to</span>
+                        <input type="number" id="max-price" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </aside>
+
+            <main class="shop-content">
+                <button class="mobile-filter-btn" id="mobile-filter-btn">Filter Products</button>
+                <div class="shop-header">
+                    <div><h2>All Products</h2><span id="result-count" class="result-count">100 products</span></div>
+                    <select id="sort-select">
+                        <option value="default">Sort by: Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+                <div class="products-grid" id="products-grid"></div>
+            </main>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+</html>
