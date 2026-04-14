@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = getProductsByCategory(category);
     if (countEl) countEl.textContent = products.length + ' products';
 
-    grid.innerHTML = products.map(p => createProductCard(p)).join('');
+    grid.innerHTML = products.map(p => createProductCard(p)).join('');    
     observeFadeIns();
 });
