@@ -145,36 +145,36 @@ function searchProducts(query) {
 function createProductCard(p) {
     const isInPages = window.location.pathname.includes('/pages/');
     const prefix = isInPages ? '' : 'pages/';
+    
     // Generate alternate image for hover effect
-    // To simulate different angles (since we only have 1 image per product), we use another image from the same category
     const categoryProducts = PRODUCTS.filter(prod => prod.category === p.category && prod.id !== p.id);
     let altProduct = categoryProducts.length > 0 ? categoryProducts[p.id % categoryProducts.length] : p;
-    
-    // Ensure the alternate image is visually different to allow cross-fade visibility
     if (altProduct.image === p.image) {
         altProduct = PRODUCTS.find(prod => prod.image !== p.image) || p;
     }
     const altImageUrl = altProduct.image;
     
-    return `<div class="product-card fade-in">
-        <a href="${prefix}product.html?id=${p.id}" class="product-image">
-            <img src="${p.image}" alt="${p.name}" class="img-primary" loading="lazy">
-            <img src="${altImageUrl}" alt="${p.name} Alternate" class="img-secondary" loading="lazy">
-            <div class="product-actions" onclick="event.preventDefault(); Cart.addItem(${p.id})">
-                <span class="btn-wrap">Add to Cart</span>
+    return `
+    <article class="product-card fade-in">
+        <a href="${prefix}product.html?id=${p.id}" class="product-link" aria-label="View ${p.name}">
+            <div class="product-image">
+                <img src="${p.image}" alt="${p.name}" class="img-primary" loading="lazy">
+                <img src="${altImageUrl}" alt="${p.name} Alternate" class="img-secondary" loading="lazy">
+                <button class="add-to-cart-quick" onclick="event.preventDefault(); typeof Cart !== 'undefined' && Cart.addItem(${p.id})" aria-label="Add ${p.name} to cart">
+                    <span>Add to Cart</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                </button>
             </div>
-        </a>
-        <div class="product-info">
-            <span class="product-category">${p.category}</span>
-            <div class="product-meta">
-                <h4 class="product-name">${p.name}</h4>
+            <div class="product-info">
+                <span class="product-category">${p.category}</span>
+                <h3 class="product-name">${p.name}</h3>
                 <span class="product-price">${formatPrice(p.price)}</span>
             </div>
-        </div>
-    </div>`;
+        </a>
+    </article>`;
 }
 
-// Global observer for fade-in elements
+// Global observer for fade-in elements (Consolidated with Nav if needed, but keeping for data-driven cards)
 function observeFadeIns() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -187,3 +187,4 @@ function observeFadeIns() {
     
     document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
 }
+
