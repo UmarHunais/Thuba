@@ -133,3 +133,4 @@ function orderViaWhatsApp(name, phone, address, city) {
 }
 
 document.addEventListener('DOMContentLoaded', initCartSidebar);
+    
